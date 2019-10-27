@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Testing the Application
 
-* Make sure the host mashine has `node version 10` or greater.
+* Make sure the host computer has `node version 10` or greater.
 * Run `npm install -g yarn` to install yarn package manager.
 * Run `yarn install` to install all the dependancies
 * Run `yarn start` to start the dev server for the app and will open up a application in the default browser.
@@ -17,6 +17,12 @@ Note: During testing I discoverd inconsistant behavior from the api. For example
 
 example get request: page 1 => https://hn.algolia.com/api/v1/search?query=prasad&tags=story&page=1
 page 5 => https://hn.algolia.com/api/v1/search?query=prasad&tags=story&page=5
+
+## Running Test Suite
+
+* Make sure all the dependancies installed by running `yarn install`.
+* Run `yarn test` to start test suite.
+* Press `a` to select to runn all the tests from the menue.
 
 ## Available Scripts
 
