@@ -1,4 +1,22 @@
+# prasad Udugama's <udugama@gmail.com> Auto and General test
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Testing the Application
+
+* Make sure the host mashine has `node version 10` or greater.
+* Run `npm install -g yarn` to install yarn package manager.
+* Run `yarn install` to install all the dependancies
+* Run `yarn start` to start the dev server for the app and will open up a application in the default browser.
+* Type search word ie : 'thunderbolt' and the app will list the page 1 for the search.
+* You may scroll between pages with the navigation buttons and the app will update the content area with appropriate list.
+* Content list area on the app is scrollable and by clicking the title will open up the story on a new browser tab.
+* Please refer following note about inconsistancy that may course in the api.
+
+Note: During testing I discoverd inconsistant behavior from the api. For example if search word is 'prasad' then the first page will be returned with 7 pages and if click next button few times and try moving farward you will get a different total number of pages to the initial amount. This is happening due to the incorrect nbpages value the api return during some of the searches.
+
+example get request: page 1 => https://hn.algolia.com/api/v1/search?query=prasad&tags=story&page=1
+page 5 => https://hn.algolia.com/api/v1/search?query=prasad&tags=story&page=5
 
 ## Available Scripts
 
@@ -26,43 +44,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
